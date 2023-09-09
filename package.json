@@ -1,0 +1,26 @@
+{
+  "name": "bank-account-management",
+  "version": "1.0.0",
+  "description": "Bank Account Management System OOP",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack server"
+  },
+  "author": "Hamda Mouhoumed",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.14",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
