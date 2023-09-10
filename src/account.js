@@ -1,30 +1,17 @@
 const _balance = new WeakMap();
 const _transactionHistory = new WeakMap();
 
-class NegativeAmountError extends Error{
-    constructor(){
-        super("Input amount should be positive");
-        this.name = 'NegativeAmountError';
-    }
-}
-
-class InsufficientFundsError extends Error{
-    constructor(){
-        super('Insufficient funds');
-        this.name = 'InsufficientFundsError';
-    }
-}
 
 class Account {
-    static accountCounter = 0;
+    //static accountCounter = 0;
 
-    constructor(accountNumber, accountType){
+    constructor(accountNumber, accountType = 'Default'){
         if (typeof accountNumber !== 'string' || accountNumber.trim() === '') {
             throw new Error('Invalid account number');
         }
 
         this.accountNumber = accountNumber;
-        this.accountType = accountType || 'Default'
+        this.accountType = accountType;
         _transactionHistory.set(this, []);
         _balance.set(this, 0);
     }
@@ -32,7 +19,7 @@ class Account {
 
     depositMoney(amount){
         const balance = _balance.get(this)
-        if(amount <= 0) throw new NegativeAmountError();
+        if(amount < 0) throw new NegativeAmountError();
         const accountBalance = balance + amount
         _balance.set(this, accountBalance)
 

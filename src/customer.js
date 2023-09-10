@@ -11,12 +11,12 @@ class Customer{
     }
 
     linkAccount(account){
-        if (account instanceof Account && !this.accounts.includes(account)) {
-            this.accounts.push(account);
-            return 'Account linked successfully.';
+        if (!(account instanceof Account) || this.accounts.includes(account)) {
+            return 'Account is already linked or is not a valid account.';
         }
 
-        return 'Account is already linked or is not a valid account.';
+        this.accounts.push(account);
+        return 'Account linked successfully.';
     }
 
     displayCustomerDetails() {
