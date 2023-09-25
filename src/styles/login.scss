@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #91aba18c;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    height: 460px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    background: url("https://e0.pxfuel.com/wallpapers/995/1004/desktop-wallpaper-unifinn-global-capital-investment-banking-corporate-finance-management-consulting-business-analytics.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired opacity */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 1;
+}
+
+.title img {
+    height: 70px;
+    margin: auto;
+    display: flex;
+    
+}
+
+.left img {
+    width: 100px;
+}
+
+
+.right {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.inputbox {
+    margin: 8px 0px 10px ;
+    width: 350px;
+    height: fit-content;
+    font-weight: bold;
+}
+
+input {
+    margin-top: 6px;
+    padding: 5px;
+    width: 100%;
+    height: 28px;
+    text-indent: 9px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(128, 128, 128, 0.2);
+}
+
+input:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.right .title h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    color: #255e31;
+}
+
+.inputbox label {
+    font-size: 1em;
+}
+
+input::placeholder {
+    text-indent: 10px;
+}
+
+.reset {
+    font-size: small;
+    color: rgb(56, 56, 255);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: end;
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+.create {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+}
+
+.create button {
+    margin-top: 5px;
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background: #255e31;
+}
+
+button {
+    width: 160px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: none;
+    border: 2px solid #000;
+}
+
+button:hover{
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (max-width: 780px) {
+    .content {
+        flex-direction: column;
+        width: 400px;
+        height: fit-content;
+        margin: 20px auto;
+    }
+    .left {
+        height: 250px;
+        width: 100%;
+        border-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .content {
+        width: 100%;
+        margin: 0px;
+        border-radius: 0px;
+    }
+    .left {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+

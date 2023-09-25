@@ -4,7 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     entry: {
-        bundle: path.resolve(__dirname, 'src/index.js')
+        bundle: path.resolve(__dirname, 'src/index.js'),
+        login: path.resolve(__dirname, 'src/login.js'),
+        dashboard: path.resolve(__dirname, 'src/dashboard.js'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -50,9 +52,22 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Bank Account Management',
+            title: 'GLOBALTRUST BANK',
             filename: 'index.html',
-            template: 'src/template.html'
+            template: 'src/template.html',
+            chunks: ['bundle']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Login',
+            filename: 'login.html',
+            template: 'src/login.html',
+            chunks: ['login']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Dashboard',
+            filename: 'dashboard.html',
+            template: 'src/dashboard.html',
+            chunks: ['dashboard']
         })
     ]
     

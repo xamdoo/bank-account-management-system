@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #91aba12a;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+}
+
+.left {
+    border: 1px solid #ffffffd8;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffd8;
+}
+
+
+.logo img {
+    height: 50px;
+    display: flex;
+    margin: 1rem 2rem 3rem;
+}
+
+.list li {
+    padding-left: 2rem;
+    list-style: none;
+    line-height: 3rem;
+    color: rgba(88, 87, 87, 0.705);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+.list li:hover {
+    color: black;
+    font-size: medium;
+    font-weight: bolder;
+    border: 0px solid #255e31;
+    background-color: #e0e0e0;
+    border-right: #255e31 5px solid;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 0px solid #fff ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 3px 0px;
+    background-color: #fffcfc;
+    height: 60px;
+    font-size: medium;
+    align-items: center;
+    padding-right: 4rem;
+}
+
+.navbar div {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar p {
+    color: rgba(88, 87, 87, 0.438);
+    margin-left: 2rem;
+}
+
+.navbar span {
+    cursor: pointer;
+    color: #255e31;
+    padding: 20px 10px 15px 10px;
+    border-bottom: 4px solid transparent;
+}
+
+.navbar span:hover {
+    background-color: #e0e0e0;
+    border-color: #255e31;
+}
